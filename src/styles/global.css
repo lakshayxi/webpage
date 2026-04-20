@@ -70,3 +70,26 @@ a:hover {
 
 /* No transitions unless explicitly defined per element */
 * { transition: none; }
+
+/* === MOBILE === */
+@media (max-width: 600px) {
+  :root {
+    --size-3xl: var(--size-2xl);
+  }
+  body {
+    padding: 0 16px;
+  }
+  .header {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .hero {
+    padding-top: 80px;
+  }
+  .nav-links {
+    display: none; /* Placeholder for mobile menu toggle logic */
+  }
+  .mobile-menu-toggle {
+    display: block;
+  }
+}
