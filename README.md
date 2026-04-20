@@ -1,43 +1,36 @@
 # Lakshay Saini Portfolio
 
-A minimalist, brutalist portfolio website built with Astro 4.x. This project focuses on high performance, static generation, and a clean monospace aesthetic to showcase ML research and engineering projects.
+A minimalist portfolio built with Astro, focusing on high performance and a clean monospace aesthetic. This site serves as a central hub for my research in machine learning robustness and various engineering projects.
 
-## Tech Stack
+## Project Goals
 
-* Framework: Astro 4.x (Static output)
-* Styling: Plain CSS
-* Fonts: IBM Plex Mono (Weights 400 and 600)
-* Deployment: GitHub Pages
+* Showcase research in model robustness, adversarial ML, and multimodal alignment.
+* Maintain a brutalist, high-contrast design with zero dependencies on CSS frameworks.
+* Optimize for static delivery and instant load times.
 
-## Architecture
+## Core Technologies
 
-The site is designed as a single column, left aligned document. It follows a modular structure where sections like Research, Projects, and Experience are built as independent Astro components. All styling is centralized in a global CSS file using tokens for consistent spacing and typography.
+* Astro 6.1.8
+* Vanilla CSS (Custom tokens and components)
+* IBM Plex Mono
+* GitHub Actions for automated CI/CD
 
-## Local Development
+## Development
 
-Prerequisites: Node.js 20 or higher.
+### Setup
 
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-4. Open http://localhost:4321 in your browser.
-
-## Build and Deployment
-
-To generate the static site manually:
+Clone the repository and install the project dependencies:
 
 ```bash
-npm run build
+npm install
 ```
 
-The output will be located in the `dist/` directory. Deployment is automated via GitHub Actions on every push to the main branch.
+### Commands
 
-## License
+* `npm run dev` - Starts a local development server at localhost:4321
+* `npm run build` - Generates the static production site in the dist/ folder
+* `npm run preview` - Previews the production build locally
 
-MIT
+## Deployment
+
+The site is automatically built and deployed to GitHub Pages via the workflow defined in `.github/workflows/deploy.yml` on every push to the main branch.
