@@ -1,0 +1,17 @@
+---
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+---
+<ProjectLayout 
+  title="Maya" 
+  year="2026" 
+  tags="PyTorch, NLP, Python"
+>
+  <h2>The question</h2>
+  <p>How do various RNN architectures compare when tasked with next-word prediction for morphologically rich languages like Hindi?</p>
+
+  <h2>What I built</h2>
+  <p>I tested five different architectures, ranging from vanilla RNNs to stacked BiLSTMs. I developed a custom tokenizer specifically for Hindi to better handle subword units and inflection.</p>
+
+  <h2>What I found</h2>
+  <p>Surprisingly, a well-tuned Vanilla RNN beat several LSTM variants in short-range prediction. However, BiLSTMs showed a clear ceiling in performance, highlighting the importance of future context in Hindi sentence structure.</p>
+</ProjectLayout>
