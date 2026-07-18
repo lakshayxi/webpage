@@ -2,9 +2,10 @@
 import ProjectLayout from '../../layouts/ProjectLayout.astro';
 ---
 <ProjectLayout 
-  title="CacheVista" 
+  title="CacheVista"
   year="Mar 2026"
   tags="PyTorch, CLIP, FAISS, Python"
+  tests="26 tests · CI on push"
 >
   <h2>The problem</h2>
   <p>Every time a VLM sees an image, it runs it through a full CLIP encoder pass. In video streams or multi-turn conversations where the same frame keeps appearing, that's a lot of compute going toward producing the exact same embedding you already computed two seconds ago. Nobody was caching this, so I built a cache.</p>

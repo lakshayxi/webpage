@@ -2,16 +2,22 @@
 import Base from './Base.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
-const { title, year, tags, github } = Astro.props;
+const { title, year, tags, github, tests } = Astro.props;
 ---
 <Base title={`${title} · Lakshay Saini`}>
   <Nav />
   <main style="padding-top: 120px;">
     <a href="../../#projects" style="font-size: var(--size-sm); text-decoration: none;">← back</a>
-    
+
     <h1 style="font-size: var(--size-2xl); font-weight: 600; margin: 24px 0 8px 0;">{title}</h1>
     <p style="color: var(--dim); font-size: var(--size-sm);">{year} · {tags}</p>
-    {github && <a href={github} target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: 12px; font-size: var(--size-sm);">github link ↗</a>}
+    {(github || tests) && (
+      <p style="margin-top: 12px; font-size: var(--size-sm);">
+        {github && <a href={github} target="_blank" rel="noopener noreferrer">github link ↗</a>}
+        {github && tests && <span style="color: var(--dim);"> · </span>}
+        {tests && <span style="color: var(--dim);">{tests}</span>}
+      </p>
+    )}
 
     <div class="details" style="margin-top: 64px;">
       <slot />
