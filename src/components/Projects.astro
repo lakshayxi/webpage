@@ -7,43 +7,43 @@ import ProjectCard from './ProjectCard.astro';
   <h2>Things I built</h2>
 
   <div class="project-list">
-    <ProjectCard 
-      name="CacheVista" 
-      year="2026" 
-      tags="PyTorch, CLIP, FAISS, Python" 
-      desc="A three layer hybrid cache designed to prevent VLMs from re-encoding previously seen images. The system combines exact hash matching with FAISS similarity detection and a trained MLP drift predictor to maintain zero accuracy loss while significantly reducing compute."
+    <ProjectCard
+      name="CacheVista"
+      year="Mar 2026"
+      tags="PyTorch, CLIP, FAISS, Python"
+      desc="A cache that stops vision-language models from doing the same expensive work twice. When the same or a very similar image shows up again, CacheVista reuses what it already computed instead of re-encoding it from scratch — cutting compute with no loss in accuracy."
       slug="cachevista"
       github="https://github.com/lakshayxi/CacheVista"
     />
-    <ProjectCard 
-      name="SMLM" 
-      year="2026" 
-      tags="PyTorch, ViT, Transformer, Python" 
-      desc="A vision language model built from scratch to understand the mechanics of multimodal alignment. I developed two variants at 28M and 6M parameters, uncovering critical insights about causal masking and the importance of parameter to token ratios in small scale training."
+    <ProjectCard
+      name="SMLM"
+      year="Mar 2026"
+      tags="PyTorch, ViT, Transformer, Python"
+      desc="A vision-language model I built entirely from scratch, just to understand how these systems actually learn to connect images and text. Training two different sizes of it taught me more about what makes small models fail than any paper did."
       slug="smlm"
       github="https://github.com/lakshayxi/SMLM"
     />
-    <ProjectCard 
-      name="Glimpse" 
-      year="2026" 
-      tags="PyTorch, CLIP, LoRA, Python" 
-      desc="An empirical study of eight vision language fusion strategies on VQA v2 with frozen CLIP features. I implemented LoRA from scratch targeting 0.19% of parameters, and found that the simplest approach won: decomposing CLIP's existing alignment into three geometric signals outperformed every cross-attention variant I tested."
+    <ProjectCard
+      name="Glimpse"
+      year="May 2026"
+      tags="PyTorch, CLIP, LoRA, Python"
+      desc="I tested eight different ways of combining image and text understanding to answer questions about pictures — and the simplest one won. A method that just reuses signals CLIP already computes beat every more complicated architecture I tried."
       slug="glimpse"
       github="https://github.com/lakshayxi/glimpse"
     />
-    <ProjectCard 
-      name="Maya" 
-      year="2026" 
-      tags="PyTorch, NLP, Python" 
-      desc="Next word prediction for Hindi using a custom tokenizer. By testing architectures from Vanilla RNNs to BiLSTMs, I demonstrated that simpler models can often outperform complex ones in short context scenarios for morphologically rich languages."
+    <ProjectCard
+      name="Maya"
+      year="Mar 2026"
+      tags="PyTorch, NLP, Python"
+      desc="A next-word prediction model for Hindi, a language English-first NLP tools tend to handle poorly. Comparing several architectures showed that a simple model can beat more complex ones when the training data is small."
       slug="maya"
       github="https://github.com/lakshayxi/maya"
     />
-    <ProjectCard 
-      name="PaperScope" 
-      year="2026" 
-      tags="Python, OpenReview API, Claude Code" 
-      desc="A tool that quantifies optimism bias in peer reviews across 35 ML venues. It pulls live data from OpenReview to build per venue calibration profiles, allowing researchers to interpret reviews relative to historical distributions rather than raw scores."
+    <ProjectCard
+      name="PaperScope"
+      year="Apr 2026"
+      tags="Python, OpenReview API, Claude Code"
+      desc="A tool that tells you how to actually read a peer review score. It pulls real review data from 35 ML conferences to show whether a given venue's reviewers tend to score generously or harshly, so a 6/10 means something concrete instead of just a number."
       slug="paperscope"
       github="https://github.com/lakshayxi/PaperScope"
     />
