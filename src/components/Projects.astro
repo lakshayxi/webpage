@@ -11,7 +11,7 @@ import ProjectCard from './ProjectCard.astro';
       name="CacheVista"
       year="Mar 2026"
       tags="PyTorch, CLIP, FAISS, Python"
-      desc="A cache that stops vision-language models from doing the same expensive work twice. When the same or a very similar image shows up again, CacheVista reuses what it already computed instead of re-encoding it from scratch — cutting compute with no loss in accuracy."
+      desc="A cache that stops vision-language models from doing the same expensive work twice. When the same or a visually similar image shows up again, it skips re-running the encoder and reuses what it already computed — a three-layer system that catches more repeats than simple exact-match caching alone."
       slug="cachevista"
       github="https://github.com/lakshayxi/CacheVista"
     />
