@@ -1,0 +1,51 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const home = import.meta.env.BASE_URL;
+---
+<Base title="404 · Lakshay Saini" description="Page not found">
+  <Nav />
+  <main>
+    <section class="not-found">
+      <h1>404</h1>
+      <p class="message">This page doesn't exist.</p>
+      <a href={home}>← back to home</a>
+    </section>
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  .not-found {
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+  h1 {
+    font-size: var(--size-3xl);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin: 0;
+  }
+  .message {
+    font-size: var(--size-base);
+    color: var(--dim);
+    margin-top: 16px;
+  }
+  a {
+    display: inline-block;
+    margin-top: 32px;
+    font-size: var(--size-sm);
+    text-decoration: none;
+  }
+  a:hover {
+    color: var(--dim);
+  }
+  @media (max-width: 600px) {
+    h1 {
+      font-size: var(--size-2xl);
+    }
+  }
+</style>
