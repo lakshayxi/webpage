@@ -1,16 +1,17 @@
 ---
+const home = import.meta.env.BASE_URL;
 ---
 <nav>
-  <a href="./" class="site-name">lakshay saini</a>
+  <a href={home} class="site-name">lakshay saini</a>
   <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">menu</button>
   <div class="nav-links" id="nav-links">
-    <a href="./#research">research</a>
+    <a href={`${home}#research`}>research</a>
     <span class="sep">/</span>
-    <a href="./#projects">projects</a>
+    <a href={`${home}#projects`}>projects</a>
     <span class="sep">/</span>
-    <a href="./#experience">experience</a>
+    <a href={`${home}#experience`}>experience</a>
     <span class="sep">/</span>
-    <a href="./#contact">contact</a>
+    <a href={`${home}#contact`}>contact</a>
     <span class="sep">/</span>
     <button class="theme-toggle" type="button" aria-pressed="false">dark</button>
   </div>
