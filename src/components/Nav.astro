@@ -2,7 +2,8 @@
 ---
 <nav>
   <a href="./" class="site-name">lakshay saini</a>
-  <div class="nav-links">
+  <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">menu</button>
+  <div class="nav-links" id="nav-links">
     <a href="./#research">research</a>
     <span class="sep">/</span>
     <a href="./#projects">projects</a>
@@ -49,4 +50,67 @@
   .sep {
     color: var(--dim);
   }
+  .mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--white);
+    font-family: var(--font);
+    font-size: var(--size-sm);
+    text-transform: lowercase;
+    padding: 4px 10px;
+    cursor: pointer;
+  }
+  .mobile-menu-toggle:hover {
+    opacity: 0.6;
+  }
+
+  @media (max-width: 600px) {
+    .mobile-menu-toggle {
+      display: block;
+    }
+    .nav-links {
+      display: none;
+      position: fixed;
+      top: 52px;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      background: var(--black);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-links.open {
+      display: flex;
+    }
+    .nav-links a {
+      padding: 14px 24px;
+      border-top: 1px solid var(--border);
+    }
+    .sep {
+      display: none;
+    }
+  }
 </style>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('.mobile-menu-toggle');
+  const links = document.querySelector<HTMLDivElement>('.nav-links');
+
+  const closeMenu = () => {
+    links?.classList.remove('open');
+    toggle?.setAttribute('aria-expanded', 'false');
+    if (toggle) toggle.textContent = 'menu';
+  };
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = links?.classList.toggle('open') ?? false;
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.textContent = isOpen ? 'close' : 'menu';
+  });
+
+  links?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+</script>
