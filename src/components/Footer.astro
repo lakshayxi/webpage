@@ -1,8 +1,9 @@
 ---
 const currentYear = new Date().getFullYear();
+const lastUpdated = new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
 ---
 <footer>
-  Lakshay Saini · {currentYear}
+  Lakshay Saini · {currentYear} · last updated {lastUpdated}
 </footer>
 
 <style>
